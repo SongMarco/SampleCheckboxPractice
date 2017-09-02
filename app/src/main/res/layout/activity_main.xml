@@ -10,15 +10,36 @@
     android:paddingTop="@dimen/activity_vertical_margin"
 
     tools:context=".MainActivity"
-    tools:showIn="@layout/activity_main"
     android:orientation="vertical">
 
-    <Button
-        android:id="@+id/buttonSwitchMode"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="onClick"
-        android:text="switchMode"/>
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/buttonSwitchMode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClick"
+            android:text="switchMode" />
+
+        <Button
+            android:id="@+id/buttonSelectAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@android:string/selectAll" />
+
+        <Button
+            android:id="@+id/buttonDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Delete" />
+
+    </LinearLayout>
 
     <ListView
         android:id="@+id/listview1"
